@@ -1,0 +1,129 @@
+body {
+    margin:0;
+    overflow-y: hidden;
+}
+
+@font-face {
+    font-family: Diatype-bold;
+    src: url(./fonts/ABCDiatype-Bold-Trial.otf);
+}
+
+@font-face {
+    font-family: Diatype-bold-italic;
+    src: url(./fonts/ABCDiatype-BoldItalic-Trial.otf);
+}
+
+@font-face {
+    font-family: Diatype-regular;
+    src: url(./fonts/ABCDiatype-Regular-Trial.otf);
+}
+
+@font-face {
+    font-family: Diatype-regular-italic;
+    src: url(./fonts/ABCDiatype-RegularItalic-Trial.otf);
+}
+
+@font-face {
+    font-family: Marist-semibold;
+    src: url(./fonts/ABCMarist-SemiBold-Trial.otf);
+}
+
+@font-face {
+    font-family: Marist-semibold-italic;
+    src: url(./fonts/ABCMarist-SemiBoldItalic-Trial.otf);
+}
+
+@font-face {
+    font-family: Marist-regular;
+    src: url(./fonts/ABCMarist-Regular-Trial.otf);
+}
+
+@font-face {
+    font-family: Marist-regular-italic;
+    src: url(./fonts/ABCMarist-RegularItalic-Trial.otf);
+}
+
+@font-face {
+    font-family: Glyphworld-flower;
+    src: url(./fonts/GlyphWorld-Flower.otf);
+}
+
+body {
+    background-repeat: no-repeat;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-top: 0;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.navbar {
+    height: 100vh;
+    width: 250px; 
+    padding: 20px; 
+    border-right: 1px dotted #000; 
+}
+
+h1 {
+}
+
+.re {
+    font-family: "Diatype-bold";
+    color: black;
+    font-size: 2rem;
+}
+
+.lim {
+    font-family: "Marist-semibold";
+    color: #67b346;
+    font-size: 2.2rem;
+} 
+
+.ca {
+    font-family: "Glyphworld-flower";
+    color: #67b346;
+    font-size: 2rem;
+}
+
+h2 {
+    padding-left: 20px;
+    font-family: "Diatype-regular";
+    color: black;
+    font-size: 0.75rem;
+}
+
+.floating-image {
+    position: absolute;
+    top: 100px; /* Position the image closer to the top */
+    left: 400px; /* Adjust according to your preference */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for desktop window effect */
+    border: 5px solid #67b346;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.floating-image:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+/* Hidden state */
+.hidden {
+    opacity: 0; /* Make the element invisible */
+    pointer-events: none; /* Prevent clicks on the hidden element */
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    
+}
