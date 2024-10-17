@@ -23,18 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector('.randomgrowth.image-container');
     const images = [
         './media/00nycskyline2.png',
-        './media/01overgrowth2.png',
         './media/flower01.png', 
-        './media/01plant5.png',
         './media/02chernobyl3.png',
-        './media/02gov2.png',
         './media/02gov3.png',
         './media/flower03.png', 
         './media/flower02.png',
         './media/01eyesore1.png', 
         './media/flower11.png',
         './media/02fukushima1.png',
-        './media/flower05.png',
+
         './media/flower06.png',
         './media/03without8.png',
         './media/vine2.png',
@@ -42,6 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to scatter images with random positioning and sizes
     function scatterImages() {
+        const windowWidth = window.innerWidth;
+        let minSize, maxSize;
+
+        // Adjust random size range based on screen width
+        if (windowWidth <= 768) {
+            minSize = 150;
+            maxSize = 250;
+        } else {
+            minSize = 350;
+            maxSize = 450;
+        }
+
         images.forEach((src, index) => {
             const imgElement = document.createElement('div');
             imgElement.classList.add('floating-image');
@@ -50,20 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const img = document.createElement('img');
             img.src = src;
 
-            // Randomize image size (e.g., between 350px and 450px width)
-            const randomSize = Math.random() * (450 - 350) + 350;
+            // Randomize image size based on the screen width
+            const randomSize = Math.random() * (maxSize - minSize) + minSize;
             img.style.width = `${randomSize}px`; // Set random width
             img.style.height = 'auto'; // Maintain aspect ratio
 
             imgElement.appendChild(img);
 
-            // Get the width and height of the viewport
-            const windowWidth = window.innerWidth; // Current viewport width
-            const windowHeight = window.innerHeight; // Current viewport height
-
             // Randomly position the image within the bounds of the viewport
-            const randomX = Math.random() * (windowWidth - randomSize); // Center randomize
-            const randomY = Math.random() * (windowHeight - randomSize); // Center randomize
+            const randomX = Math.random() * (windowWidth - randomSize); // Randomize X position
+            const randomY = Math.random() * (window.innerHeight - randomSize); // Randomize Y position
 
             imgElement.style.position = 'absolute'; // Ensure absolute positioning
             imgElement.style.left = `${randomX}px`;
