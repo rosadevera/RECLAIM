@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll('h1 span');
     
     // Define animation timings for each span (in milliseconds)
-    const delays = [0, 2000, 2100, 2200, 0, 2300]; // Adjust this for each letter
+    const delays = [0, 1500, 1600, 1700, 0, 1800]; // Adjust this for each letter
 
     // Function to animate each span
     elements.forEach((element, index) => {
@@ -17,68 +17,83 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelector('.sections');
     setTimeout(() => {
         sections.classList.add('visible');
-    }, 2750); // Delay of 2.5 seconds for the section reveal
+    }, 2500); // Delay of 2.5 seconds for the section reveal
 
-    // Image Scattering
-    const imageContainer = document.querySelector('.image-container');
+    // Image Scattering in .randomgrowth
+    const imageContainer = document.querySelector('.randomgrowth.image-container');
     const images = [
-        './media/01eyesore1.png', 
+        './media/00nycskyline2.png',
+        './media/01overgrowth2.png',
         './media/02gov2.png', 
         './media/flower01.png', 
-        './media/02chernobyl1.png',
+        './media/01plant5.png',
+        './media/02chernobyl3.png',
+        './media/02gov2.png',
+        './media/02gov3.png',
+        './media/flower03.png', 
         './media/flower02.png',
+        './media/01eyesore1.png', 
         './media/flower11.png',
-        './media/02fukushima2.png',
         './media/02fukushima1.png',
-        './media/00nycskyline.png',
-        './media/vine2.png',
-        './media/flower04.png',
         './media/flower05.png',
         './media/flower06.png',
-        './media/flower07.png',
+        './media/03without8.png',
         './media/flower08.png',
-        './media/flower10.png',
+        './media/02chernobyl2.png',
         './media/flower13.png',
+        './media/vine2.png',
     ];
 
-    // Function to scatter images
+    // Function to scatter images with random positioning and sizes
     function scatterImages() {
         images.forEach((src, index) => {
             const imgElement = document.createElement('div');
             imgElement.classList.add('floating-image');
 
+            // Create the actual image tag
             const img = document.createElement('img');
             img.src = src;
 
-            const randomSize = Math.random() * (400 - 150) + 150;
-            img.style.width = `400px`;
-            img.style.height = 'auto';
+            // Randomize image size (e.g., between 150px and 400px width)
+            const randomSize = Math.random() * (450 - 350) + 350;
+            img.style.width = `${randomSize}px`; // Set random width
+            img.style.height = 'auto'; // Maintain aspect ratio
 
             imgElement.appendChild(img);
 
-            const scatterAreaWidth = window.innerWidth * 1.1;
-            const scatterAreaHeight = window.innerHeight * 1.1;
+            // Adjust image container size (since we allow overflow, larger than viewport)
+            const scatterAreaWidth = window.innerWidth * 1; // Allow overflow outside viewport
+            const scatterAreaHeight = window.innerHeight * 1;
 
-            const randomX = Math.random() * scatterAreaWidth - randomSize / 2;
-            const randomY = Math.random() * scatterAreaHeight - randomSize / 2;
+            // Randomly position the image, some parts may be outside viewport
+            const randomX = Math.random() * scatterAreaWidth - (randomSize / 2); // Center randomize
+            const randomY = Math.random() * scatterAreaHeight - (randomSize / 2);
 
+            imgElement.style.position = 'absolute'; // Ensure absolute positioning
             imgElement.style.left = `${randomX}px`;
             imgElement.style.top = `${randomY}px`;
 
+            // Append image element to the container
             imageContainer.appendChild(imgElement);
 
+            // Add delay to image appearance
             setTimeout(() => {
                 imgElement.classList.add('show');
-            }, index * 200);
+            }, index * 100); // Stagger appearance
 
-            imgElement.addEventListener('click', () => {
-                imgElement.classList.add('hidden');
+            // Make the image disappear when clicked
+            imgElement.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent the click from bubbling up
+                imgElement.classList.add('hidden'); // Add hidden class on click to fade out
             });
+
+            // Make the image draggable (this needs to happen after appending to DOM)
+            $(imgElement).draggable();
         });
     }
 
-    // Wait for 2 seconds, then scatter images
-    setTimeout(scatterImages, 2000);
+    // Wait for 2 seconds after section reveal, then scatter images
+    setTimeout(scatterImages, 2100); // Start scattering images 2 seconds after section reveal (4.5 seconds total)
 });
 
 // Function to get the translateY value for each letter

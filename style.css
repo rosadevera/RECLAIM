@@ -45,11 +45,19 @@
 
 body {
     background-repeat: no-repeat;
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     margin: 0;
     overflow: hidden;
+}
+
+img {
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 @keyframes fadeInAnimation {
@@ -214,14 +222,6 @@ button:hover {
     color: #67b346;
 }
 
-.randomgrowth {
-    height: 100vh;
-    width: 100vw;
-    position: absolute; /* Make this layer float on top */
-    top: 0; 
-    left: 0; 
-}
-
 .overgrowth1 {
     position: fixed;
     top: -100px;
@@ -300,18 +300,36 @@ button:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 3; /* Make sure this is on top of everything */
-    pointer-events: none; /* So that buttons below are clickable */
+    z-index: 3; /* Ensure this is on top of the sections */
+    pointer-events: none; /* So that buttons below are still clickable */
 }
 
 .floating-image {
     position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.25s ease, transform 0.25s ease; /* Smooth transition */
+    pointer-events: auto; /* Allow images to be clicked */
+}
+
+.floating-image:hover {
+    cursor: pointer;
+    transform:scale(1.05);
+    filter: drop-shadow(0px 0px 0.5px black);
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.25s;
+    pointer-events: auto;
+}
+
+.floating-image.show {
+    opacity: 1; /* Fades in the images when the class is added */
+    pointer-events: auto; /* Allow interaction */
+    transition: opacity 0.25s ease, transform 0.25s ease, pointer-events 0.3s;
+}
+
+.floating-image.hidden {
+    opacity: 0; /* Fades out the image when clicked */
 }
 
 
 @media only screen and (max-width: 768px) {
-
     
 }

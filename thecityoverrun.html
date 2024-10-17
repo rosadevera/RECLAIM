@@ -7,14 +7,32 @@
     <meta name="description" content="Exploring the unexpected beauty that comes with the contrast of man-made structures and nature taking over, nature reclaiming the city, peeking out through urbanization.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="sectionstyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 
 <header class="nav">
-    <p><</p>
-    <img src="./media/00RECLAIMLOGO.png" width="100px" height="auto">
-    <p>></p>
+    <img src="./media/hamburger.png" id="hamburger" height="20px">
+    <a href="./index.html"><img src="./media/00RECLAIMLOGO.png" width="100px" height="auto"></a>
+    <a href="./mementosfrom.html"><p>→</p></a>
 </header>
+
+<aside>
+    <a href="./index.html">HOME</a>
+    <a href="./thecityoverrun.html" class="current"><span class="sanserif">THE CITY</span><span class="serif"> OVERRUN!</span></a>
+    <a href="./mementosfrom.html"><span class="bsserif2">MEMENTOS FROM </span><span class="bserif">BE</span><span class="gserif">A</span><span class="bserif">U</span><span class="gserif">TI</span><span class="bserif">F</span><span class="gserif">UL</span> <span class="bserif">R</span><span class="gserif">UIN</span><span class="bserif">S</span></a>
+    <a href="./lifeafterhumans.html"><span class="gsserif">LIFE AFTER</span><span class="serif"> HUMANS</span></a>
+    <a href="./whatnext.html"><span class="glyph">WHAT NEXT?</span></a>
+</aside>
+
+<section class="images" id="floating-image">
+    <img src="./media/01overgrowth1.png" class="overgrowth01">
+    <img src="./media/01overgrowth2.png" class="overgrowth02">
+    <img src="./media/01nyc3112.png" class="nyc3112">
+    <img src="./media/01plant.png" class="plant">
+</section>
 
 <section class="text">
     <h2><span class="sanserif">THE CITY</span><span class="serif"> OVERRUN!</span></h2>
@@ -22,6 +40,8 @@
     <h4>(Sep 3, 2024)</h4>
     <h4>By Rosa de Vera</h4>
     <br>
+    <img src="./media/00nycskyline2.png">
+    <br><br>
     <p>
         NEW YORK CITY, N.Y. -- Across the world's most densely populated cities, something remarkable happens when human presence fades: nature slowly begins to take over. In places like New York City, where every inch of space is highly valued, vacant lots, abandoned buildings, and unkept public spaces transform into surprising displays of overgrowth. What may begin as cracks in the sidewalk sprouting weeds, or ivy creeping up the sides of dilapidated buildings, can soon morph into entire urban landscapes reclaimed by greenery. These forgotten spaces, once symbols of human dominance, have now been overtaken by vines, trees, and wildlife. Though many view these overgrown areas as eyesores or signs of neglect, there's an unexpected beauty in the fusion of natural growth with man-made environments.
         </p>
@@ -41,6 +61,8 @@
     <h4>By Erik Bascome</h4>
     <h4>tbascome@siadvance.com</h4>
     <br>
+    <img src="./media/01eyesore1.png">
+    <br><br>
     <p>
         STATEN ISLAND, N.Y. -- An abandoned, partially collapsed home that’s been unoccupied for more than a decade is now completely covered in overgrown weeds, morphing into an unsightly blight on the Great Kills community.
         </p>
@@ -93,6 +115,10 @@
         This post-human urban landscape does more than offer an aesthetic contrast between decay and renewal. It forces us to confront the reality of our environmental footprint and the power of nature to reclaim its space. The spontaneous emergence of greenery in these abandoned areas suggests that while human control over the environment may be strong, it is not absolute. In the absence of maintenance and upkeep, nature continues its quiet yet powerful work of restoration, turning what was once urban into wild, thriving ecosystems.
     </p>
 </section>
+
+<div id="afk-images-container"></div>
+
+<script src="sections.js"></script>
 
 </body>
 </html>
