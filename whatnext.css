@@ -413,6 +413,17 @@ aside a:hover {
 
 @media only screen and (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav {
+        width: 100vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+
 .text {
     width: 75%;
 }

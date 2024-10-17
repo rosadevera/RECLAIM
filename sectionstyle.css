@@ -321,7 +321,7 @@ aside a:hover {
 .vine1 {
     position: absolute;
     right:25vw;
-    width: 200px;
+    width: 170px;
 }
 
 .gov12 {
@@ -554,6 +554,12 @@ body {
     overflow-x: hidden;
 }
 
+.nav {
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .text {
     width: 75%;
 }
@@ -574,8 +580,40 @@ p {
 }
 
 h3 {
-    font-size: 2rem;   
-    line-height: 2rem;
+    font-size: 1.75rem;   
+    line-height: 1.75rem;
+}
+
+.serif {
+    font-size: 2.5rem;    
+}
+
+.sanserif {
+    font-size: 2rem;  
+}
+
+.bsserif2 {
+    font-size: 2rem; 
+}
+
+.gsserif {
+    font-size: 2rem;  
+}
+
+.bsserif { 
+    font-size: 2rem;  
+}
+
+.gserif {
+    font-size: 2.5rem;  
+}
+
+.bserif {
+    font-size: 2.5rem; 
+}
+
+.glyph {
+    font-size: 2.5rem;
 }
 
 aside {
@@ -583,89 +621,100 @@ aside {
     left: -120vw;
 }
 
-#floating-image img {
-    width: 400px; /* Adjust this value based on your design */
-    height: auto; /* Maintain the aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
+#floating-image .overgrowth01 {
+    top: 700px;
+    left:20vw;
+    width: 170px;
 }
 
-.vine1 {
-    right:5vw;
-    width: 100px;
-}
-
-.gov12 {
-    /* top: 1700px; */
-    right:5vw;
-    width: 250px;
-}
-
-.wales1 {
-    /* top: 3000px; */
-    left:5vw;
-    width: 225px;
-}
-
-.vine2 {
-    /* top: 4000px; */
-    left:5vw;
-    width: 250px;
-}
-
-.flower01 {
-    /* top: 4500px; */
-    left:5vw;
+#floating-image .overgrowth02 {
+    top: 1300px;
+    left:40vw;
     width: 200px;
 }
 
-.chernobyl2 {
-    /* top: 5300px; */
-    right:5vw;
-    border: solid 1px black; 
-    width: 450px;
+#floating-image .nyc3112 {
+    top: 3300px;
+    left:15vw;
+    width: 200px;
 }
 
-.chernobyl3 {
-    /* top: 5600px; */
+#floating-image .plant {
+    top: 4900px;
+    left:40vw;
+    width: 200px;
+}
+
+#floating-image .vine1 {
+    right:10vw;
+    width: 150px;
+}
+
+#floating-image .gov12 {
+    top: 1500px;
+    right:5vw;
+    width: 250px;
+}
+
+#floating-image .wales1 {
+    top: 2500px;
+    left:5vw;
+    width: 225px;
+}
+
+#floating-image .vine2 {
+    top: 3100px;
+    left:15vw;
+    width: 250px;
+}
+
+#floating-image .chernobyl2 {
+    top: 4200px;
+    right:5vw;
+    border: solid 1px black; 
+    width: 300px;
+}
+
+#floating-image .chernobyl3 {
+    top: 4400px;
     left:5vw;
     border: solid 1px black; 
     width: 250px;
 }
 
-.vine5 {
+#floating-image .vine5 {
     right: -10vw;
-    /* top: 5500px; */
+    top: 4800px;
     width: 400px;
 }
 
-.flower10 {
-    /* top: 6300px; */
-    width: 350px;
+#floating-image .flower10 {
+    top: 5100px;
+    width: 250px;
 }
 
-.fukushima2 {
-    /* top: 6500px; */
+#floating-image .fukushima2 {
+    top: 5500px;
     right:5vw;
     width: 225px;
 }
 
-.fukushima1 {
-    /* top: 6800px; */
+#floating-image .fukushima1 {
+    top: 5600px;
     left:5vw;
     width: 250px;
 }
 
-.vine4 {
+#floating-image .vine4 {
     right: -10vw;
-    /* top: 6700px; */
-    width: 250px;
+    top: 5700px;
+    width: 200px;
 }
 
-.vine3 {
+#floating-image .vine3 {
     left: -10vw;
-    /* top: 7200px; */
-    width: 450px;
+    top: 5950px;
+    width: 300px;
 }
 
 }
