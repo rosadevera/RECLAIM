@@ -40,11 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let inactivityTimeout;
     let afkInterval;
 
-    // Check for mobile devices
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
     // Function to display AFK images
     function showAfkImages() {
+        // Check for mobile devices
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
         // Prevent AFK images from showing on mobile devices
         if (isMobile) return;
 
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 afkImage.style.opacity = '1';
             }, 10);
-        }, 3000); // Show a new image every 2 seconds
+        }, 3000); // Show a new image every 3 seconds
     }
 
     // Function to hide AFK images with fade-out effect

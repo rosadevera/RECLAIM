@@ -550,6 +550,10 @@ aside a:hover {
 
 @media only screen and (max-width: 768px) {
 
+body {
+    overflow-x: hidden;
+}
+
 .text {
     width: 75%;
 }
@@ -570,8 +574,8 @@ p {
 }
 
 h3 {
-    font-size: 2.2rem;   
-    line-height: 2.2rem;
+    font-size: 2rem;   
+    line-height: 2rem;
 }
 
 aside {
@@ -584,6 +588,84 @@ aside {
     height: auto; /* Maintain the aspect ratio */
     display: block;
     margin: 0 auto; /* Center the image horizontally */
+}
+
+.vine1 {
+    right:5vw;
+    width: 100px;
+}
+
+.gov12 {
+    /* top: 1700px; */
+    right:5vw;
+    width: 250px;
+}
+
+.wales1 {
+    /* top: 3000px; */
+    left:5vw;
+    width: 225px;
+}
+
+.vine2 {
+    /* top: 4000px; */
+    left:5vw;
+    width: 250px;
+}
+
+.flower01 {
+    /* top: 4500px; */
+    left:5vw;
+    width: 200px;
+}
+
+.chernobyl2 {
+    /* top: 5300px; */
+    right:5vw;
+    border: solid 1px black; 
+    width: 450px;
+}
+
+.chernobyl3 {
+    /* top: 5600px; */
+    left:5vw;
+    border: solid 1px black; 
+    width: 250px;
+}
+
+.vine5 {
+    right: -10vw;
+    /* top: 5500px; */
+    width: 400px;
+}
+
+.flower10 {
+    /* top: 6300px; */
+    width: 350px;
+}
+
+.fukushima2 {
+    /* top: 6500px; */
+    right:5vw;
+    width: 225px;
+}
+
+.fukushima1 {
+    /* top: 6800px; */
+    left:5vw;
+    width: 250px;
+}
+
+.vine4 {
+    right: -10vw;
+    /* top: 6700px; */
+    width: 250px;
+}
+
+.vine3 {
+    left: -10vw;
+    /* top: 7200px; */
+    width: 450px;
 }
 
 }

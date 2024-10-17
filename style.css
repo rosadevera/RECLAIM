@@ -185,6 +185,7 @@ button:hover {
     bottom:120px;
     right:250px;
     transform: rotate(10deg);
+    z-index: 1;
 }
 
 .bsserif {
@@ -329,7 +330,45 @@ button:hover {
     opacity: 0; /* Fades out the image when clicked */
 }
 
+#afk-images-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Make sure the user interaction doesn't interfere */
+    z-index: 1000; /* Make sure AFK images appear on top */
+}
+
+#afk-images-container img.afk-image {
+    width: 150px; /* Adjust the size of the AFK images as needed */
+    transition: opacity 1s ease; /* Ensure the fade-in effect works */
+    filter: drop-shadow(0px 0px 1px rgb(105, 105, 105) );
+}
 
 @media only screen and (max-width: 768px) {
     
+    .re {
+        font-size: 3.7rem;
+    }
+    
+    .c {
+        font-size: 3.5rem;
+    }
+    
+    .l {
+        font-size: 4rem;
+    } 
+    
+    .a {
+        font-size: 3.5rem;
+    }
+    
+    .i {
+        font-size: 4rem;
+    } 
+    
+    .m {
+        font-size: 4rem;
+    } 
 }
